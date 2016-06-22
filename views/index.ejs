@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My To Do App</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1> My To Dos</h1>
+    <ul>
+      <% todos.forEach(function(item) { %>
+        <li><%= item.task %></li>
+      <% }) %>
+    </ul>
+
+    <form action="/items" method="post">
+    <label>Task:</label>
+      <input type='text' name='task'>
+
+    <input type='submit' value='Add task'>
+    </form>
+  </body>
+</html>
